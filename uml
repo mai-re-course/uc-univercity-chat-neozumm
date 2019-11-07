@@ -1,0 +1,11 @@
+@startuml
+actor User
+actor Backend
+left to right direction
+skinparam packageStyle rectangle
+rectangle forwarding{
+	User --> (Select message) : use application
+	(Selected messages) --> Backend : app sends data 
+	Backend --> (Delivered messages) : backend sends messages
+}
+@enduml

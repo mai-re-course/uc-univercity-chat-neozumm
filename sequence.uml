@@ -1,0 +1,8 @@
+@startuml
+User -> App : select message to forward and user to forward to
+User ->x App : if didnt select - cancel scenario
+App -> Backend : send message data
+Backend -> Friendapp : recieve message event 
+Friendapp -> Frienduser : play notification sound
+
+@enduml
